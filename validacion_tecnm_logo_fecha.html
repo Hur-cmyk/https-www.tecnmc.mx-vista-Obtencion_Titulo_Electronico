@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validación de Título</title>
+  <style>
+    :root{
+      --bg:#f4f6fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f62fe;
+      --radius:10px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background: linear-gradient(180deg,var(--bg),#fff);
+      margin:0;
+      padding:24px;
+      color:#111827;
+    }
+    .container{max-width:960px;margin:0 auto;}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
+    .logo img{
+      width:90px;
+      height:auto;
+    }
+    h1{font-size:20px;margin:0}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.06);margin-top:12px;}
+    .result{display:grid;grid-template-columns:1fr 220px;gap:16px;align-items:start;margin-top:12px;}
+    .info{display:grid;gap:8px;}
+    .row{display:flex;gap:12px;align-items:baseline;}
+    .label{color:var(--muted);font-size:13px;width:160px}
+    .value{font-weight:600}
+    .qr{background:#fbfbff;border:1px dashed #e6e9ef;padding:12px;border-radius:8px;text-align:center}
+    @media (max-width:780px){.result{grid-template-columns:1fr}.label{width:120px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="https://www.tecnm.mx/images/tecnm_logo.png" alt="Logo TecNM">
+      </div>
+      <div>
+        <h1>Validación de Título</h1>
+      </div>
+    </header>
+
+    <div class="card" role="main">
+      <div class="result">
+        <div class="info">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:14px;color:var(--muted)">Resultado de validación</div>
+              <div style="font-size:18px;font-weight:700;margin-top:6px">TÍTULO AUTENTICADO</div>
+            </div>
+            <div style="text-align:right;color:var(--muted)">
+              <div>Expedición: 15/09/2025</div>
+              <div style="margin-top:6px">RVOE: IIND-2010-227</div>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid #eef2f8;margin:8px 0 12px" />
+
+          <div class="row"><div class="label">Nombre:</div><div class="value">Raymundo Fernández Delgado</div></div>
+          <div class="row"><div class="label">Programa:</div><div class="value">Ingeniería Industrial</div></div>
+          <div class="row"><div class="label">Campus:</div><div class="value">Tecnológico de Ciudad Juárez</div></div>
+          <div class="row"><div class="label">Grado:</div><div class="value">Ingeniero</div></div>
+          <div class="row"><div class="label">Folio SEP:</div><div class="value">SEP-2025-123456</div></div>
+          <div class="row"><div class="label">CURP:</div><div class="value">FEDR940729HCHRLY07</div></div>
+          <div class="row"><div class="label">Observación:</div><div class="value">Constancia de autenticación disponible.</div></div>
+        </div>
+
+        <div>
+          <div class="qr">
+            <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Código QR</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Raymundo%20Fernandez%20Delgado%20-%20TecNM%20Cd%20Juarez%20-%20IIND-2010-227" alt="QR" style="width:160px;height:160px;border-radius:6px;background:white" />
+            <div style="margin-top:10px;font-size:12px;color:var(--muted)">Escanea para más detalles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
